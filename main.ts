@@ -13,7 +13,6 @@ function LearnOneFace () {
     basic.pause(500)
     huskylens.writeLearn1(1)
 }
-basic.clearScreen()
 pins.digitalWritePin(DigitalPin.P0, 0)
 huskylens.initI2c()
 huskylens.initMode(protocolAlgorithm.ALGORITHM_FACE_RECOGNITION)
