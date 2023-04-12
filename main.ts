@@ -3,9 +3,17 @@ function ForgetData () {
         huskylens.forgetLearn()
     }
 }
+function LearnFacesWithDifferentID () {
+    basic.pause(500)
+    huskylens.writeLearn1(huskylens.getIds() + 1)
+}
+function LearnFacesWithSameID () {
+    basic.pause(500)
+    huskylens.writeLearn1(1)
+}
 input.onPinPressed(TouchPin.P1, function () {
     pins.digitalWritePin(DigitalPin.P0, 1)
-    LearnOneFace()
+    LearnFacesWithDifferentID()
     pins.digitalWritePin(DigitalPin.P0, 0)
 })
 function LearnOneFace () {
